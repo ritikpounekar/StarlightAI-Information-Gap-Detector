@@ -10,16 +10,6 @@ services:
     envVars:
       - key: PYTHON_VERSION
         value: 3.12.8
-      - key: GROK_API_KEY
-        sync: false
-      - key: SEARCH_API_KEY
-        sync: false
-      - key: SEARCH_PROVIDER
-        sync: false
-      - key: GROK_MODEL
-        sync: false
-      - key: LLM_MODE
-        sync: false
       - key: FRONTEND_ORIGIN
         sync: false
 

@@ -40,7 +40,7 @@ Uploaded content is processed in memory for the request and is not saved by the 
 
 - **Live demo:** [Add the deployed StarlightAI URL here]
 - **Hosting:** Render free web service (FastAPI) and static site (Vite/React); no Docker required.
-- **Deploy:** Connect the GitHub repository to Render and use the included `render.yaml` Blueprint. Set `VITE_API_BASE_URL` to the deployed API base URL on the static site. Set `FRONTEND_ORIGIN` on the API service to the frontend origin; multiple comma-separated origins are accepted. Optional integrations can be configured through the service environment variables. Do not commit credentials.
+- **Deploy:** Connect the GitHub repository to Render and use the included `render.yaml` Blueprint. Set `VITE_API_BASE_URL` to the deployed API base URL on the static site. Set `FRONTEND_ORIGIN` on the API service to the frontend origin; multiple comma-separated origins are accepted. The current prototype runs its transparent heuristic engine and does not require external provider credentials.
 - **Keep-alive monitor:** Configure an UptimeRobot HTTP(s) monitor to ping the API's `/api/health` endpoint every 5 minutes. Render's free service may otherwise spin down when idle.
 
 The Render Blueprint pins Python 3.12.8 and configures the SPA fallback. The API exposes both `/health` (local launcher compatibility) and `/api/health` (deployment health check). Research streaming is available at `/api/research/stream` as unbuffered server-sent events.
